@@ -36,8 +36,10 @@ cy.get('#block_frame_featured_1769 > .thumbnails > :nth-child(1) > .thumbnail > 
         //checkout
     cy.get('#cart_checkout1').click();
     cy.get('#checkout_btn').click();
-    cy.get('.maintext').should('contain','Your Order Has Been Processed!')
-
+    cy.get('.maintext').should('contain', 'Your Order Has Been Processed!').then(() => {
+        alert('Successful');
+      });
+      
 
         });
      
